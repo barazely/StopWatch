@@ -3,4 +3,8 @@
     <string name="healthy">Healthy On You</string>
     <string name="breif_txt">Key of happiness is not alife for money</string>
     <string name="start_txt">Get Started</string>
+    <string name="start">Start Now</string>
+    <string name="stop">Finish Workout</string>
+    <string name="content_im">Circle</string>
+    <string name="content_anc">Anchor</string>
 </resources>

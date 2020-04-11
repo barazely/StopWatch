@@ -2,7 +2,9 @@ package com.barazeli.stopwatch;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.Button;
@@ -33,6 +35,13 @@ public class MainActivity extends AppCompatActivity {
         key_of_happ.startAnimation(txt1);
         get_start.startAnimation(txt2);
         img.startAnimation(atg);
+        get_start.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getApplicationContext(),Time.class);
+                startActivity(intent);
+            }
+        });
 
 
 

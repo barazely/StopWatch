@@ -5,4 +5,7 @@
     <color name="colorAccent">#03DAC5</color>
     <color name="key_of">#FFFACF</color>
     <color name="happ_heal">#FFF9C0</color>
+    <color name="start">#03E3FF</color>
+    <color name="stop">#FB1E0E</color>
+    <color name="white">#FFFFFF</color>
 </resources>
