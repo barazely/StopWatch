@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#211D44"
+    tools:context=".MainActivity" >
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="380dp"
+        android:layout_height="390dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.483"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.123"
+        app:srcCompat="@drawable/icget" />
+
+    <TextView
+        android:id="@+id/happ"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:text="@string/healthy"
+        android:textColor="@color/happ_heal"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img"
+        app:layout_constraintVertical_bias="0.068" />
+
+    <TextView
+        android:id="@+id/key_hap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+
+        android:gravity="center"
+        android:text="@string/breif_txt"
+        android:textAlignment="center"
+        android:textColor="@color/key_of"
+        android:textSize="21sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/happ"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/start_btn"
+        android:background="@drawable/btn_back"
+        android:layout_width="280dp"
+        android:layout_height="55dp"
+        android:text="@string/start_txt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/key_hap" />
+</androidx.constraintlayout.widget.ConstraintLayout>
