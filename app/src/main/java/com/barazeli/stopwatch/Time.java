@@ -1,7 +1,9 @@
 package com.barazeli.stopwatch;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.os.SystemClock;
 import android.view.View;
@@ -37,18 +39,23 @@ public class Time extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 anchor.startAnimation(animAnchor);
-                stop.animate().alpha(1).translationY(-200).setDuration(350).start();
-                start.animate().alpha(0).translationY(80).setDuration(150).start();
+                stop.animate().alpha(1).translationY(-150).setDuration(350).start();
+                start.animate().alpha(0).translationY(80).setDuration(350).start();
                 chronometer.setBase(SystemClock.elapsedRealtime());
                 chronometer.start();
             }
         });
         stop.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
             @Override
             public void onClick(View v) {
                 animAnchor.cancel();
-                start.animate().alpha(1).translationY(80).setDuration(300).start();
-                stop.animate().alpha(0).translationY(20).setDuration(200).start();
+                start.animate().alpha(1).setDuration(350).start();
+                stop.animate().alpha(0).translationY(300.2f).setDuration(350).start();
+                chronometer.stop();
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+                    chronometer.resetPivot();
+                }
             }
         });
 
